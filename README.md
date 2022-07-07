@@ -25,6 +25,10 @@ make prod # in production mode
 make dev  # in dev mode
 ```
 
+### API available
+
+[dummy/fetch](doc/fetch.md)
+
 ## Roadmap
 
 - [X] Dummy backend
