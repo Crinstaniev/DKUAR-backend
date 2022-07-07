@@ -1,0 +1,5 @@
+make: Entering directory `/Users/crinstaniev/Dev/SRS2022/backend'
+cat run.sh >run 
+chmod a+x run
+make: Leaving directory `/Users/crinstaniev/Dev/SRS2022/backend'
+ 
