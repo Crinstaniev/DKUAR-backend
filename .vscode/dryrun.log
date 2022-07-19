@@ -1,5 +1,7 @@
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/Users/crinstaniev/Dev/SRS2022/backend'
-cat run.sh >run 
-chmod a+x run
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask run
 make: Leaving directory `/Users/crinstaniev/Dev/SRS2022/backend'
  
