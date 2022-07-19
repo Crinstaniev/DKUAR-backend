@@ -4,7 +4,16 @@ This is the backend for DKUAR project. This project is under active development
 
 ## Installation and Deployment
 
-### Create virtual environment
+### Using Docker (Recommended)
+
+Run
+
+```shell
+docker compose build
+docker compose up
+```
+
+### Self-Hosted
 
 Use `venv` to create virtual environment and activate
 
@@ -32,6 +41,6 @@ make dev  # in dev mode
 ## Roadmap
 
 - [X] Dummy backend
-- [ ] Docker-compose deployment
+- [X] Docker-compose deployment
 - [ ] (Temporary) YOLOv5 for object detection
 - [ ] Model optimization

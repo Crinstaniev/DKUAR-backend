@@ -2,8 +2,8 @@ import os
 
 from flask import Flask
 from flaskr.dummy import dummy_backend
-from flasgger import Swagger, LazyString, LazyJSONEncoder
 from flasgger import swag_from
+from flask_cors import CORS
 
 
 def create_app(test_config=None):
@@ -28,7 +28,18 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    app.json_encoder = LazyJSONEncoder
+    CORS(app)
+
+    @app.after_request
+    def after_request(response):
+        response.headers.add("Access-Control-Allow-Origin", "*")
+        response.headers.add(
+            "Access-Control-Allow-Headers", "Content-Type, Authorization,x-api-key"
+        )
+        response.headers.add(
+            "Access-Control-Allow-Methods", "GET,OPTION,PUT,POST,DELETE"
+        )
+        return response
 
     # a simple page that says hello
     app.register_blueprint(dummy_backend)
